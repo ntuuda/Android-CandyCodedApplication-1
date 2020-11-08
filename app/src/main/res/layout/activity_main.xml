@@ -14,6 +14,25 @@
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/candy_coded" />
 
+    <Button
+        android:id="@+id/LaunchMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alighnParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alighParentTop="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginButtom="6dp"
+        android:onClick="process"
+        android:text="Launch Map"/>
+
+    <Button
+        android:layout_width="wrap content"
+        android:layout_height="wrap content"
+        android:text="Dial"
+        android:id="@+Id/btn"
+        android:onClick="onDialButton"/>
+
     <TextView
         android:id="@+id/text_view_title"
         android:layout_width="wrap_content"

@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
     private Candy[] candies;
     private CandyDbHelper candyDbHelper = new CandyDbHelper(this);
 
+    Button Dial;
+    Button LaunchMap;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,5 +108,23 @@ public class MainActivity extends AppCompatActivity {
 
             db.insert(CandyEntry.TABLE_NAME, null, values);
         }
+    }
+    public void createMapIntent(View view) {
+
+        intent intent=null; chooser=null;
+        If(view.getId()==R.Id.LaunchMap){
+            intent new Intent(android.content.IntentAction_View);
+            intent.setData(Uri.parse("geo:22.6188104,17.0935996"));
+            chooser=Intent.createChooser(Intent, "Launch Maps");
+            startActivity(chooser);
+        }
+    }
+
+    public void onDialButton(View view) {
+
+        Intent intent = new Intent(Intent (Intent.ACTION_DIAL));
+        intent.setData(Uri.parse("tel:0123456789"));
+        startActivity(intent);
+
     }
 }
